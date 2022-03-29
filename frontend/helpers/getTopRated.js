@@ -3,7 +3,7 @@ import axios from 'axios';
 export async function getTopRated(id, amount) {
   try {
     const { data } = await axios.get(
-      `https://cms.puppetino.com/products?category=${id}&_limit=${amount}&_sort=rating:DESC`
+      `https://cms.jaytronics.co.nz/products?category=${id}&_limit=${amount}&_sort=rating:DESC`
     );
 
     return data;

@@ -3,7 +3,7 @@ import axios from 'axios';
 export async function getOrder(link, auth) {
   try {
     const { data } = await axios.get(
-      `https://cms.puppetino.com/orders/getOrder?order=${link}&auth=${auth}`
+      `https://cms.jaytronics.co.nz/orders/getOrder?order=${link}&auth=${auth}`
       // `http://localhost:1337/orders/getOrder?order=${link}&auth=${auth}`
     );
 

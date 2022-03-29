@@ -123,7 +123,9 @@ export default function ContactForm() {
         </Grid>
 
         <Grid item>
-          <Typography sx={{ fontWeight: '700' }}>hi@puppetino.com</Typography>
+          <Typography sx={{ fontWeight: '700' }}>
+            hi@jaytronics.co.nz
+          </Typography>
         </Grid>
       </Grid>
     </Grid>

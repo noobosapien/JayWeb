@@ -78,12 +78,7 @@ const NavButton = styled(IconButton)(({ theme }) => ({
   top: '1rem',
 }));
 
-const CustomLogo = styled(Image)(({ theme }) => ({
-  [theme.breakpoints.down('xl')]: {
-    // width: '10rem !important',
-  },
-  // width: '10px',
-}));
+const CustomLogo = styled(Image)(({ theme }) => ({}));
 
 export default function Layout({ title, description, children }) {
   const { state, dispatch } = useContext(Store);
@@ -100,11 +95,11 @@ export default function Layout({ title, description, children }) {
   return (
     <>
       <Head>
-        <title>{title ? `${title}` : 'Puppetino'}</title>
+        <title>{title ? `${title}` : 'Jaytronics'}</title>
         {description && <meta name="description" content={description} />}
       </Head>
 
-      <Stack sx={{ width: '100%' }} justifyContent="center" spacing={2}>
+      {/* <Stack sx={{ width: '100%' }} justifyContent="center" spacing={2}>
         <Collapse in={openShipping} sx={{ width: '100%' }}>
           <Paper
             variant="outlined"
@@ -134,7 +129,7 @@ export default function Layout({ title, description, children }) {
             </Grid>
           </Paper>
         </Collapse>
-      </Stack>
+      </Stack> */}
 
       <SearchDialog openSearch={openSearch} setOpenSearch={setOpenSearch} />
 
@@ -224,7 +219,7 @@ export default function Layout({ title, description, children }) {
         </Toolbar>
       </AppBar>
 
-      <TopMenu />
+      {/* <TopMenu /> */}
 
       {children}
 
@@ -324,7 +319,7 @@ export default function Layout({ title, description, children }) {
                     cursor: 'pointer',
                   }}
                 >
-                  What is Puppetino?
+                  What is Jaytronics?
                 </Typography>
               </NextLink>
             </Grid>

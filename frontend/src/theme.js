@@ -11,6 +11,8 @@ const darkGray = '#454545';
 const lightBrown = '#B1AB7D';
 const orange = '#ff7700';
 const lightRed = '#ff6b6b';
+const lightBlue = '#00e5ff';
+const blue = '#00555e';
 
 const purple = '#42005e';
 const roseRed = '#ff006f';
@@ -18,7 +20,7 @@ const roseRed = '#ff006f';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#ff006f',
+      main: blue,
       // main: '#ffffff',
     },
     secondary: {
@@ -41,6 +43,8 @@ const theme = createTheme({
       lightRed,
       purple,
       roseRed,
+      lightBlue,
+      blue,
     },
   },
 

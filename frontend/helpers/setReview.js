@@ -11,7 +11,7 @@ export async function setReview(
 ) {
   try {
     const res = await axios.post(
-      `https://cms.puppetino.com/reviews?id=${productID}`,
+      `https://cms.jaytronics.co.nz/reviews?id=${productID}`,
       {
         rating,
         user: name,

@@ -24,10 +24,10 @@ export default function Refunds() {
         <h3>RETURN PROCESS</h3>
 
         <p>
-          To return an item, please email customer service at hi@puppetino.com
-          to obtain a Return Merchandise Authorization (RMA) number, place the
-          item securely in it's original packaging and mail your return to the
-          following address:
+          To return an item, please email customer service at
+          hi@jaytronics.co.nz to obtain a Return Merchandise Authorization (RMA)
+          number, place the item securely in it's original packaging and mail
+          your return to the following address:
         </p>
 
         <p>
@@ -71,7 +71,7 @@ export default function Refunds() {
           us at:
         </p>
 
-        <h4>hi@puppetino.com</h4>
+        <h4>hi@jaytronics.co.nz</h4>
       </div>
     </Layout>
   );

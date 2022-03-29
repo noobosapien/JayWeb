@@ -3,7 +3,7 @@ import axios from 'axios';
 export async function getProducts(sort, param, setAllProducts) {
   try {
     const { data } = await axios.get(
-      'https://cms.puppetino.com/' +
+      'https://cms.jaytronics.co.nz/' +
         `products?category.name_contains=${param}&_sort=${sort.method}:${
           sort.asc ? 'ASC' : 'DESC'
         }`
