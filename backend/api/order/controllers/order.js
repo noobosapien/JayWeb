@@ -227,7 +227,7 @@ module.exports = {
             amount: Number((serverTotal + shippingValid.price) * 100).toFixed(
               0
             ),
-            currency: "usd",
+            currency: "nzd",
             receipt_email: shippingAddress.email.value,
           },
           { idempotencyKey }

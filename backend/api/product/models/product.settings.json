@@ -32,12 +32,6 @@
       "type": "decimal",
       "required": true
     },
-    "height": {
-      "type": "decimal"
-    },
-    "width": {
-      "type": "decimal"
-    },
     "images": {
       "collection": "file",
       "via": "related",
@@ -75,18 +69,6 @@
     },
     "additionalInfo": {
       "type": "json"
-    },
-    "quotes": {
-      "type": "json"
-    },
-    "alert": {
-      "type": "json"
-    },
-    "tags": {
-      "type": "json"
-    },
-    "description2": {
-      "type": "text"
     }
   }
 }
