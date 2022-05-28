@@ -183,7 +183,7 @@ export default function Carousel({ products }) {
                 fontSize: '1.0rem',
               })}
             >
-              Artisan's corner
+              Jaytronics's corner
             </Typography>
           </Grid>
           <Grid item container justifyContent="space-evenly" spacing={4}>

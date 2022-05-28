@@ -220,7 +220,7 @@ export default function About() {
                   color: '#fff',
                 }}
               >
-                Our Artisans
+                Our Jaytronicss
               </MyTypo>
             </Grid>
 
@@ -238,7 +238,7 @@ export default function About() {
                 align="center"
                 sx={{ fontSize: '1.5rem', fontFamily: 'Rancho' }}
               >
-                Our artisans strive for uniqueness and quality, we could even
+                Our Jaytronicss strive for uniqueness and quality, we could even
                 call it perfection, we find it a privilege to work with such
                 talent.
               </Typography>

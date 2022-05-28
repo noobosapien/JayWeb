@@ -132,7 +132,7 @@ export default function TopMenu() {
               <CardActionArea
                 disableRipple
                 onClick={(e) => {
-                  router.push('/category/Artisans Corner');
+                  router.push('/category/Jaytonics');
                 }}
               >
                 <Grid
@@ -144,7 +144,7 @@ export default function TopMenu() {
                   <Grid item>
                     <Image
                       src={Art}
-                      alt={'artisans corner'}
+                      alt={'Jaytronicss corner'}
                       width={40}
                       height={40}
                     />
@@ -157,7 +157,7 @@ export default function TopMenu() {
                         fontSize: matchesMD ? '0.6rem' : '1.5rem',
                       }}
                     >
-                      Artisan's Corner
+                      Jaytronics's Corner
                     </Typography>
                   </Grid>
                 </Grid>

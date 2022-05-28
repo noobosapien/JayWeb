@@ -10,7 +10,7 @@ import { styled } from '@mui/system';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import Clean from '../../public/clean2.jpg';
-import Artisan from '../../public/rare.svg';
+import Jaytronics from '../../public/rare.svg';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
@@ -97,7 +97,7 @@ export default function Hero() {
   };
 
   const handleGoToAC = async (e) => {
-    router.push('/category/Artisans Corner');
+    router.push('/category/Jaytronicss Corner');
   };
 
   return (
@@ -186,8 +186,8 @@ export default function Hero() {
                 <CardMedia
                   component="img"
                   height="100%"
-                  image={Artisan.src}
-                  alt="artisan's corner"
+                  image={Jaytronics.src}
+                  alt="Jaytronics's corner"
                   sx={{
                     opacity: 0.7,
                   }}
@@ -214,7 +214,7 @@ export default function Hero() {
                     '1px 1px rgb(59, 0, 61), -0.2rem 0 .4rem rgb(59, 0, 61)',
                 }}
               >
-                Artisan's corner
+                Jaytronics's corner
               </Typography>
             </Grid>
 

@@ -330,7 +330,7 @@ module.exports = {
     {
       id: 14,
       title: "Laravel",
-      description: "The PHP Framework For Web Artisans",
+      description: "The PHP Framework For Web Jaytronicss",
       price: 1.84,
       slug: "laravel",
       status: "published",

@@ -49,8 +49,8 @@ export default function Category(props) {
 
   return (
     <Layout
-      title="Artisan Cey"
-      description={'Artisan Cey hand crafted and delivered'}
+      title="jaytronics"
+      description={'jaytronics hand crafted and delivered'}
     >
       <Grid
         container

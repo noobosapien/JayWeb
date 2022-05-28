@@ -23,9 +23,9 @@ const images = [
   },
   {
     url: des3.src,
-    title: 'Sculptures by Artisans',
+    title: 'Sculptures by Jaytronicss',
     width: '33%',
-    href: '/category/Sculptures by Artisans',
+    href: '/category/Sculptures by Jaytronicss',
   },
 ];
 

@@ -6,7 +6,7 @@ import Layout from '../components/Layout';
 
 export default function Home({ featured }) {
   return (
-    <Layout title="Jaytronics" description={'Jaytronics passion for puppets'}>
+    <Layout title="Jaytronics" description={'Jaytronics: We sell batteries'}>
       <Hero />
       <Carousel products={featured} />
       <LatestProducts />
