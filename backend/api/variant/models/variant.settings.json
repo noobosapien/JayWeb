@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "variants",
+  "info": {
+    "name": "Variant"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "product": {
+      "model": "product",
+      "via": "variants"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "otherData": {
+      "type": "json"
+    }
+  }
+}

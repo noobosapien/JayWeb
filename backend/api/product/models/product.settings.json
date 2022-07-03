@@ -69,6 +69,10 @@
     },
     "additionalInfo": {
       "type": "json"
+    },
+    "variants": {
+      "via": "product",
+      "collection": "variant"
     }
   }
 }
