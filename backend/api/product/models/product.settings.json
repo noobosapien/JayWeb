@@ -17,9 +17,6 @@
       "required": true,
       "unique": true
     },
-    "description": {
-      "type": "text"
-    },
     "featured": {
       "type": "boolean",
       "required": true
@@ -27,20 +24,6 @@
     "category": {
       "model": "category",
       "via": "products"
-    },
-    "price": {
-      "type": "decimal",
-      "required": true
-    },
-    "images": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
     },
     "slug": {
       "type": "string",
@@ -59,16 +42,8 @@
     "noofreviews": {
       "type": "integer"
     },
-    "stock": {
-      "type": "integer",
-      "required": false,
-      "min": 0
-    },
     "products": {
       "collection": "product"
-    },
-    "additionalInfo": {
-      "type": "json"
     },
     "variants": {
       "via": "product",

@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "variants",
   "info": {
-    "name": "Variant"
+    "name": "Variant",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -16,8 +17,8 @@
       "required": true
     },
     "product": {
-      "model": "product",
-      "via": "variants"
+      "via": "variants",
+      "model": "product"
     },
     "description": {
       "type": "text",
@@ -25,6 +26,25 @@
     },
     "otherData": {
       "type": "json"
+    },
+    "price": {
+      "type": "integer",
+      "required": true
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "stock": {
+      "type": "integer",
+      "default": 1,
+      "required": true
     }
   }
 }
