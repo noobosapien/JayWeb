@@ -1,16 +1,16 @@
 import Carousel from '../components/Home/Carousel';
+import CategoryMenu from '../components/Home/CategoryMenu';
 import Hero from '../components/Home/Hero';
 import LatestProducts from '../components/Home/LatestProducts';
-import Satisfaction from '../components/Home/Satisfaction';
 import Layout from '../components/Layout';
 
 export default function Home({ featured }) {
   return (
     <Layout title="Jaytronics" description={'Jaytronics: We sell batteries'}>
       <Hero />
+      <CategoryMenu />
       <Carousel products={featured} />
       <LatestProducts />
-      <Satisfaction />
     </Layout>
   );
 }

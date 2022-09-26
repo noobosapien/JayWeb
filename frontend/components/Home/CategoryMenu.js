@@ -2,30 +2,51 @@ import { ButtonBase, Grid, Typography } from '@mui/material';
 import React from 'react';
 import { styled } from '@mui/material/styles';
 import { Box } from '@mui/system';
-import des1 from '../../public/shell_bowl.jpg';
-import des2 from '../../public/candle.jpg';
-import des3 from '../../public/bundle.jpg';
+import electronics from '../../public/electronics.jpg';
+import electrical from '../../public/electrical.jpg';
+import drones from '../../public/drone.jpg';
+import metering from '../../public/metering.jpg';
+import batteries from '../../public/batteries.jpg';
+import hobbies from '../../public/hobbies.jpg';
 
 import NextLink from 'next/link';
 
 const images = [
   {
-    url: des1.src,
-    title: 'Clean Living',
+    url: electronics.src,
+    title: 'Electronic Equipment',
     width: '33%',
-    href: '/category/Clean Living',
+    href: '/category/Electronics',
   },
   {
-    url: des2.src,
-    title: 'Home Deco',
+    url: electrical.src,
+    title: 'Electrical Equipment',
     width: '33%',
-    href: '/category/Home Deco',
+    href: '/category/Electrical',
   },
   {
-    url: des3.src,
-    title: 'Sculptures by Jaytronicss',
+    url: drones.src,
+    title: 'Drone Equipment',
     width: '33%',
-    href: '/category/Sculptures by Jaytronicss',
+    href: '/category/Drones',
+  },
+  {
+    url: metering.src,
+    title: 'Metering Equipment',
+    width: '33%',
+    href: '/category/Metering',
+  },
+  {
+    url: batteries.src,
+    title: 'Batteries',
+    width: '33%',
+    href: '/category/Batteries',
+  },
+  {
+    url: hobbies.src,
+    title: 'Hobbies',
+    width: '33%',
+    href: '/category/Hobbies',
   },
 ];
 
@@ -95,48 +116,17 @@ const ImageMarked = styled('span')(({ theme }) => ({
 
 export default function CategoryMenu() {
   return (
-    <Grid
-      container
-      justifyContent="center"
-      alignItems="center"
-      direction="column"
-      spacing={10}
-      sx={(theme) => ({
-        [theme.breakpoints.up('xl')]: {
-          marginTop: '10%',
-        },
-        [theme.breakpoints.down('xl')]: {
-          marginTop: '20%',
-        },
-        [theme.breakpoints.down('lg')]: {
-          marginTop: '25%',
-        },
-        [theme.breakpoints.down('md')]: {
-          marginTop: '30%',
-        },
-        [theme.breakpoints.down('sm')]: {
-          marginTop: '30%',
-        },
-        [theme.breakpoints.down('xs')]: {
-          marginTop: '35%',
-        },
-      })}
-    >
-      <Grid item>
-        <Typography variant="h3">Categories</Typography>
-      </Grid>
-
+    <Grid container justifyContent="center" alignItems="center">
       <Grid item>
         <Box
           sx={(theme) => ({
             display: 'flex',
             flexWrap: 'wrap',
-            [theme.breakpoints.up('xl')]: { minWidth: 1000 },
+            [theme.breakpoints.up('xl')]: { minWidth: 1200 },
             [theme.breakpoints.down('xl')]: { minWidth: 1000 },
             [theme.breakpoints.down('lg')]: { minWidth: 800 },
             [theme.breakpoints.down('md')]: { minWidth: 550 },
             [theme.breakpoints.down('sm')]: { minWidth: 250 },
-            [theme.breakpoints.down('xs')]: { minWidth: 1000 },
             width: '100%',
           })}
         >

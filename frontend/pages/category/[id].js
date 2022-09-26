@@ -160,7 +160,7 @@ export default function Category(props) {
         </Grid>
 
         <Grid item container justifyContent="space-evenly" spacing={10}>
-          {allProducts &&
+          {allProducts instanceof Array &&
             allProducts.map((prod) => {
               return (
                 <Grid item key={prod.id}>

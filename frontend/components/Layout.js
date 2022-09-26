@@ -310,21 +310,6 @@ export default function Layout({ title, description, children }) {
 
           <Grid item container direction="column" alignItems="center" md={4}>
             <Grid item>
-              <NextLink href="/about">
-                <Typography
-                  href="/about"
-                  variant="body2"
-                  sx={{
-                    fontSize: '1.5rem',
-                    cursor: 'pointer',
-                  }}
-                >
-                  What is Jaytronics?
-                </Typography>
-              </NextLink>
-            </Grid>
-
-            <Grid item>
               <NextLink href="/privacy">
                 <Typography
                   variant="body2"
