@@ -34,7 +34,9 @@ export default function ProductCard({ product }) {
   if (product) {
     prod.id = product.id ? product.id : '';
     prod.img =
-      product.images && product.images[0] ? product.images[0].url : candle.src;
+      product.images instanceof Array && product.images[0]
+        ? product.images[0].url
+        : undefined;
     prod.name = product.name ? product.name : 'Name';
     prod.price = product.price ? product.price : '0';
     prod.slug = product.slug ? product.slug : '';
@@ -48,9 +50,11 @@ export default function ProductCard({ product }) {
     const updateReviews = async () => {
       const info = await getProductInfo(prod.id);
       prod.noOfReviews =
-        info instanceof Array && info[0].noofreviews ? info[0].noofreviews : 0;
+        info instanceof Array && info[0] && info[0].noofreviews
+          ? info[0].noofreviews
+          : 0;
       prod.rating =
-        info instanceof Array && info[0].rating ? info[0].rating : 0;
+        info instanceof Array && info[0] && info[0].rating ? info[0].rating : 0;
 
       setUpdate(update + 1);
     };
@@ -82,7 +86,7 @@ export default function ProductCard({ product }) {
   }));
 
   const handleGotoProduct = (slug) => (e) => {
-    router.push(`/product/${slug}`);
+    router.push(`/variant/${slug}`);
   };
 
   const handleAddToCart = async (e) => {

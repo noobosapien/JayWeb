@@ -66,7 +66,6 @@ export default function Category(props) {
           <Typography
             sx={{
               fontSize: matchesMD ? '1.5rem' : '3rem',
-              fontFamily: 'Monoton',
             }}
           >
             {param}

@@ -47,8 +47,13 @@
       "required": true
     },
     "category": {
-      "model": "category",
-      "via": "variants"
+      "via": "variants",
+      "model": "category"
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }

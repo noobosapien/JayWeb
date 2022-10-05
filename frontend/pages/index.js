@@ -3,10 +3,12 @@ import CategoryMenu from '../components/Home/CategoryMenu';
 import Hero from '../components/Home/Hero';
 import LatestProducts from '../components/Home/LatestProducts';
 import Layout from '../components/Layout';
+import TopCarousel from '../components/Home/TopCarousel';
 
 export default function Home({ featured }) {
   return (
     <Layout title="Jaytronics" description={'Jaytronics: We sell batteries'}>
+      <TopCarousel />
       <Hero />
       <CategoryMenu />
       <Carousel products={featured} />

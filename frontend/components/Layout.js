@@ -51,7 +51,7 @@ const LogoButton = styled(Button)(({ theme }) => ({
     width: '18rem !important',
   },
   [theme.breakpoints.up('lg')]: {
-    width: '24rem !important',
+    width: '18rem !important',
   },
 
   '&:hover': {
@@ -99,38 +99,6 @@ export default function Layout({ title, description, children }) {
         {description && <meta name="description" content={description} />}
       </Head>
 
-      {/* <Stack sx={{ width: '100%' }} justifyContent="center" spacing={2}>
-        <Collapse in={openShipping} sx={{ width: '100%' }}>
-          <Paper
-            variant="outlined"
-            sx={(theme) => ({
-              background: theme.palette.common.roseRed,
-              borderRadius: 0,
-            })}
-          >
-            <Grid
-              container
-              justifyContent="center"
-              alignItems="center"
-              spacing={3}
-            >
-              <Grid item>
-                <Typography
-                  variant="body2"
-                  sx={{ color: '#fff', fontSize: '1.2rem' }}
-                >
-                  20% goes to charity in your name.
-                </Typography>
-              </Grid>
-
-              <Grid item>
-                <Image src={Stars} alt="stars" width={30} height={30} />
-              </Grid>
-            </Grid>
-          </Paper>
-        </Collapse>
-      </Stack> */}
-
       <SearchDialog openSearch={openSearch} setOpenSearch={setOpenSearch} />
 
       <AppBar position="static" elevation={0} color="transparent">
@@ -145,6 +113,7 @@ export default function Layout({ title, description, children }) {
               <NextLink href="/" passHref>
                 <LogoButton disableRipple component={Link}>
                   <CustomLogo src={Logo} alt="Logo" />
+                  {/* <Typography variant="h4">Jaytronics</Typography> */}
                 </LogoButton>
               </NextLink>
             </Grid>
@@ -243,31 +212,7 @@ export default function Layout({ title, description, children }) {
             spacing={4}
           >
             <Grid item>
-              <Image src={Sticker} alt="sticker" width={50} height={50} />
-            </Grid>
-
-            <Grid item>
-              <Grid
-                container
-                direction="column"
-                alignItems="center"
-                spacing={2}
-              >
-                <Grid item>
-                  <Typography variant="body2" sx={{ fontSize: '1.4rem' }}>
-                    20% goes to
-                  </Typography>
-                </Grid>
-
-                <Grid item>
-                  <Image
-                    src={OTP}
-                    alt="one tree planted"
-                    width={215}
-                    height={50}
-                  />
-                </Grid>
-              </Grid>
+              <Image src={Logo} alt="sticker" width={150} height={30} />
             </Grid>
 
             <Grid item>
@@ -298,7 +243,7 @@ export default function Layout({ title, description, children }) {
 
             <Grid item>
               <Typography align="center">
-                Currency: USD{' '}
+                Currency: NZD{' '}
                 <Image src={Flag} alt="USD" width={32} height={16} />
               </Typography>{' '}
             </Grid>

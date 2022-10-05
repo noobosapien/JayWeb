@@ -78,13 +78,5 @@ export default function Hero() {
   const matchesLG = useMediaQuery(theme.breakpoints.down('lg'));
   const matchesXL = useMediaQuery(theme.breakpoints.down('xl'));
 
-  const handleGoToCL = async (e) => {
-    router.push('/category/Clean Living');
-  };
-
-  const handleGoToAC = async (e) => {
-    router.push('/category/Jaytronicss Corner');
-  };
-
   return <></>;
 }

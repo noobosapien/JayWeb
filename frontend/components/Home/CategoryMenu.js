@@ -116,7 +116,14 @@ const ImageMarked = styled('span')(({ theme }) => ({
 
 export default function CategoryMenu() {
   return (
-    <Grid container justifyContent="center" alignItems="center">
+    <Grid
+      container
+      justifyContent="center"
+      alignItems="center"
+      sx={{
+        marginTop: '4rem',
+      }}
+    >
       <Grid item>
         <Box
           sx={(theme) => ({

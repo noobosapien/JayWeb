@@ -51,42 +51,41 @@ const theme = createTheme({
   typography: {
     h1: {
       fontSize: '4.5rem',
-      fontFamily: 'Ranga',
-      fontStyle: 'italic',
+      fontFamily: 'Montserrat',
       // fontWeight: 700,
       color: roseRed,
     },
     h2: {
-      fontFamily: 'Rancho',
+      fontFamily: 'Montserrat',
       fontSize: '3rem',
       // fontWeight: 500,
       color: black,
     },
     h3: {
-      fontFamily: 'Rancho',
+      fontFamily: 'Montserrat',
       fontSize: '2rem',
       // fontWeight: 300,
       color: black,
     },
     h4: {
-      fontFamily: 'Ranga',
+      fontFamily: 'Montserrat',
       // fontWeight: 700,
       fontSize: '3rem',
       color: black,
     },
     h5: {
-      fontFamily: 'Ranga',
+      fontFamily: 'Montserrat',
       fontSize: '1.4rem',
       // fontWeight: 700,
       color: lightGray,
     },
     body1: {
-      // fontFamily: 'Ranga',
+      // fontFamily: 'Montserrat',
       fontSize: '0.8rem',
       color: gray,
     },
     body2: {
-      fontFamily: 'Rancho',
+      fontFamily: 'Montserrat',
       fontSize: '1.0rem',
       color: black,
     },
@@ -97,14 +96,14 @@ const theme = createTheme({
         backgroundColor: roseRed,
       },
       label: {
-        fontFamily: 'Rancho',
+        fontFamily: 'Montserrat',
         fontSize: '1.5rem',
         color: '#fff',
         // fontWeight: 400,
       },
     },
     '.MuiTextField-root': {
-      fontFamily: 'Roboto',
+      fontFamily: 'Montserrat',
     },
   },
 });

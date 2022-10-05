@@ -73,6 +73,7 @@ export default function ProductPage(props) {
   useEffect(() => {
     const updateReviews = async () => {
       try {
+        console.log('Product ', product);
         const info = await getProductInfo(product[0]?.id);
         prodInfo.noofreviews =
           info instanceof Array && info[0].noofreviews
@@ -172,52 +173,6 @@ export default function ProductPage(props) {
                     showPlayButton={false}
                     thumbnailPosition={'left'}
                   />
-                </Grid>
-
-                <Grid item>
-                  <Grid container justifyContent="space-evenly" spacing={4}>
-                    <Grid item>
-                      {prodInfo.tags && prodInfo.tags.coconut ? (
-                        <Grid container direction="column">
-                          <Grid item>
-                            <IconButton>
-                              <Image src={Coconut} height={64} width={64} />
-                            </IconButton>
-                          </Grid>
-
-                          <Grid item>
-                            <Typography variant="body2">
-                              Coconut based
-                            </Typography>
-                          </Grid>
-                        </Grid>
-                      ) : (
-                        <></>
-                      )}
-                    </Grid>
-
-                    <Grid item>
-                      {prodInfo.tags && prodInfo.tags.eco ? (
-                        <Grid container direction="column" alignItems="center">
-                          <Grid item>
-                            <IconButton>
-                              <Image src={Eco} height={64} width={64} />
-                            </IconButton>
-                          </Grid>
-
-                          <Grid item>
-                            <Typography variant="body2">
-                              Eco-friendly
-                            </Typography>
-                          </Grid>
-                        </Grid>
-                      ) : (
-                        <></>
-                      )}
-                    </Grid>
-                  </Grid>
-
-                  {/* tags */}
                 </Grid>
               </Grid>
             </Grid>
@@ -426,61 +381,6 @@ export default function ProductPage(props) {
                     <></>
                   )}
                 </Grid>
-
-                <Grid item>
-                  <Card elevation={10}>
-                    <CardActionArea>
-                      <Grid container direction="column" alignItems="center">
-                        <Grid item>
-                          <CardContent>
-                            <Typography
-                              variant="body2"
-                              sx={{ fontSize: '1.4rem' }}
-                            >
-                              Something to be proud of...
-                            </Typography>
-                          </CardContent>
-                        </Grid>
-
-                        <Grid item>
-                          <CardContent>
-                            <Typography
-                              variant="body2"
-                              sx={{ fontSize: '1.4rem' }}
-                            >
-                              <span
-                                style={{ fontSize: '1.6rem', color: '#3a8783' }}
-                              >
-                                20%
-                              </span>{' '}
-                              of your purchase goes to
-                            </Typography>
-                          </CardContent>
-                        </Grid>
-
-                        <Grid item>
-                          <Image
-                            height="50"
-                            width={215}
-                            src={OTP.src}
-                            alt="OTP"
-                          />
-                        </Grid>
-
-                        <Grid item>
-                          <CardContent>
-                            <Typography
-                              variant="body2"
-                              sx={{ fontSize: '1.4rem' }}
-                            >
-                              On us... in your name.
-                            </Typography>
-                          </CardContent>
-                        </Grid>
-                      </Grid>
-                    </CardActionArea>
-                  </Card>
-                </Grid>
               </Grid>
             </Grid>
           </Grid>
@@ -612,12 +512,12 @@ export default function ProductPage(props) {
 
 export async function getStaticPaths() {
   try {
-    const res = await fetch(process.env.STRAPI_BASE + `products`);
+    const res = await fetch(process.env.STRAPI_BASE + `variants`);
     const products = await res.json();
 
     const names = [];
     products.forEach((prod) => {
-      names.push('/product/' + prod.slug); //This has the first letter capital
+      names.push('/variant/' + prod.slug); //This has the first letter capital
     });
 
     return {
@@ -634,8 +534,10 @@ export async function getStaticProps(context) {
 
     var param = slug.toLowerCase();
 
-    const res = await fetch(process.env.STRAPI_BASE + `products?slug=${param}`);
+    const res = await fetch(process.env.STRAPI_BASE + `variants?slug=${param}`);
     const product = await res.json();
+
+    console.log(params);
 
     return {
       props: {
