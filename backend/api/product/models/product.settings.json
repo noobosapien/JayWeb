@@ -44,10 +44,6 @@
     },
     "products": {
       "collection": "product"
-    },
-    "variants": {
-      "via": "product",
-      "collection": "variant"
     }
   }
 }

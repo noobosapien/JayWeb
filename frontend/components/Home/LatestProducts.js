@@ -35,7 +35,9 @@ export default function LatestProducts() {
       sx={{ marginTop: '0%' }}
     >
       <Grid item>
-        <Typography variant="h3">Latest items in our catalouge</Typography>
+        <Typography variant="h3" fontWeight="100" textAlign="center">
+          Latest items in our catalouge
+        </Typography>
       </Grid>
 
       <Grid item container justifyContent={justify} spacing={10}>

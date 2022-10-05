@@ -27,9 +27,9 @@
       "via": "category",
       "collection": "product"
     },
-    "variants": {
+    "product_categories": {
       "via": "category",
-      "collection": "variant"
+      "collection": "product-category"
     }
   }
 }

@@ -66,96 +66,11 @@ export default function Category(props) {
           <Typography
             sx={{
               fontSize: matchesMD ? '1.5rem' : '3rem',
+              fontWeight: '200',
             }}
           >
             {param}
           </Typography>
-        </Grid>
-        <Grid item xs={12} lg={6}>
-          <Card variant="outlined">
-            <CardActions>
-              <Grid
-                container
-                direction="row"
-                spacing={{ xs: 1, sm: 2, md: 4 }}
-                justifyContent="center"
-                alignItems="center"
-              >
-                <Grid item>
-                  <FilterAltIcon color="primary" />
-                </Grid>
-
-                <Grid item>
-                  <ToggleButtonGroup
-                    color="primary"
-                    value={sort.method}
-                    exclusive
-                  >
-                    <ToggleButton
-                      value="name"
-                      onClick={handleStateChange('name')}
-                    >
-                      A-Z
-                      {sort.method === 'name' ? (
-                        sort.asc ? (
-                          <ArrowCircleUpIcon />
-                        ) : (
-                          <ArrowCircleDownIcon />
-                        )
-                      ) : (
-                        ''
-                      )}
-                    </ToggleButton>
-                    <ToggleButton
-                      value="price"
-                      onClick={handleStateChange('price')}
-                    >
-                      Price
-                      {sort.method === 'price' ? (
-                        sort.asc ? (
-                          <ArrowCircleUpIcon />
-                        ) : (
-                          <ArrowCircleDownIcon />
-                        )
-                      ) : (
-                        ''
-                      )}
-                    </ToggleButton>
-                    <ToggleButton
-                      value="createdAt"
-                      onClick={handleStateChange('createdAt')}
-                    >
-                      Latest
-                      {sort.method === 'createdAt' ? (
-                        sort.asc ? (
-                          <ArrowCircleUpIcon />
-                        ) : (
-                          <ArrowCircleDownIcon />
-                        )
-                      ) : (
-                        ''
-                      )}
-                    </ToggleButton>
-                    <ToggleButton
-                      value="reviews"
-                      onClick={handleStateChange('reviews')}
-                    >
-                      Reviews
-                      {sort.method === 'reviews' ? (
-                        sort.asc ? (
-                          <ArrowCircleUpIcon />
-                        ) : (
-                          <ArrowCircleDownIcon />
-                        )
-                      ) : (
-                        ''
-                      )}
-                    </ToggleButton>
-                  </ToggleButtonGroup>
-                </Grid>
-              </Grid>
-            </CardActions>
-          </Card>
         </Grid>
 
         <Grid item container justifyContent="space-evenly" spacing={10}>

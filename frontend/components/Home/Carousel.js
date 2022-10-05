@@ -67,7 +67,13 @@ export default function Carousel({ products }) {
         sx={{ marginBottom: '30vh' }}
       >
         <Grid item alignSelf="center">
-          <Typography variant="h3">Most viewed items</Typography>
+          <Typography
+            variant="h3"
+            textAlign="center"
+            sx={{ fontWeight: '100' }}
+          >
+            Most viewed items
+          </Typography>
         </Grid>
 
         <Grid
