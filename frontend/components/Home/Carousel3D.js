@@ -13,13 +13,12 @@ import {
 import { useRouter } from 'next/router';
 
 const CustomImg = styled(Card)(({ theme }) => ({
-  backgroundColor: theme.palette.common.blue,
+  backgroundColor: theme.palette.common.darkBlue,
   borderRadius: '2rem',
 }));
 
 const CustomTyp = styled(Typography)(({ theme }) => ({
   color: '#fff',
-  fontFamily: 'Rancho',
   fontSize: '1.0rem',
 }));
 

@@ -163,14 +163,14 @@ export default function ProductPage(props) {
         <Grid item>
           {/* Product */}
           <Grid container justifyContent="space-evenly" spacing={3}>
-            <Grid item>
+            <Grid item lg={5}>
               <Grid container direction="column" spacing={4}>
                 <Grid item>
                   <ImageGallery
                     items={images}
                     showFullscreenButton={false}
                     showPlayButton={false}
-                    thumbnailPosition={'left'}
+                    thumbnailPosition={'bottom'}
                   />
                 </Grid>
               </Grid>
@@ -511,12 +511,12 @@ export default function ProductPage(props) {
 
 export async function getStaticPaths() {
   try {
-    const res = await fetch(process.env.STRAPI_BASE + `variants`);
+    const res = await fetch(process.env.STRAPI_BASE + `products`);
     const products = await res.json();
 
     const names = [];
     products.forEach((prod) => {
-      names.push('/product/' + prod.slug); //This has the first letter capital
+      names.push('/product/' + prod.slug);
     });
 
     return {
@@ -533,7 +533,7 @@ export async function getStaticProps(context) {
 
     var param = slug.toLowerCase();
 
-    const res = await fetch(process.env.STRAPI_BASE + `variants?slug=${param}`);
+    const res = await fetch(process.env.STRAPI_BASE + `products?slug=${param}`);
     const product = await res.json();
 
     console.log(params);

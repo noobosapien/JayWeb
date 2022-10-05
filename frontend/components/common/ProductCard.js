@@ -119,10 +119,11 @@ export default function ProductCard({ product }) {
                   <Typography
                     variant="body2"
                     sx={(theme) => ({
-                      fontWeight: '700',
-                      fontSize: '1.5rem',
+                      fontWeight: '500',
+                      fontSize: '1.0rem',
                       color: theme.palette.common.lightGray,
                     })}
+                    textAlign="center"
                   >
                     {prod.name}
                   </Typography>
