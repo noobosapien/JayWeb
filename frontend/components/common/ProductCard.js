@@ -86,7 +86,7 @@ export default function ProductCard({ product }) {
   }));
 
   const handleGotoProduct = (slug) => (e) => {
-    router.push(`/variant/${slug}`);
+    router.push(`/product/${slug}`);
   };
 
   const handleAddToCart = async (e) => {

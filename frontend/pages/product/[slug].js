@@ -73,7 +73,6 @@ export default function ProductPage(props) {
   useEffect(() => {
     const updateReviews = async () => {
       try {
-        console.log('Product ', product);
         const info = await getProductInfo(product[0]?.id);
         prodInfo.noofreviews =
           info instanceof Array && info[0].noofreviews
@@ -517,7 +516,7 @@ export async function getStaticPaths() {
 
     const names = [];
     products.forEach((prod) => {
-      names.push('/variant/' + prod.slug); //This has the first letter capital
+      names.push('/product/' + prod.slug); //This has the first letter capital
     });
 
     return {
