@@ -1,6 +1,6 @@
 import { Grid, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import ProductCategoryCard from '../../components/common/ProductCategoryCard';
+import ProductCard from '../../components/common/ProductCard';
 import Layout from '../../components/Layout';
 import { getProductCategories } from '../../helpers/getProductsCategories';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -16,7 +16,7 @@ export default function Category(props) {
 
   useEffect(() => {
     setAllProducts(products);
-    console.log(products);
+    console.log('PRODUCTS: ', products);
   }, [products]);
 
   // useEffect(() => {
@@ -24,10 +24,7 @@ export default function Category(props) {
   // }, [param]);
 
   return (
-    <Layout
-      title="jaytronics"
-      description={'jaytronics hand crafted and delivered'}
-    >
+    <Layout title="jaytronics" description={'jaytronics'}>
       <Grid
         container
         justifyContent="space-evenly"
@@ -54,7 +51,7 @@ export default function Category(props) {
             allProducts.map((prod) => {
               return (
                 <Grid item key={prod.id}>
-                  <ProductCategoryCard product={prod} />
+                  <ProductCard product={prod} />
                 </Grid>
               );
             })}
@@ -66,12 +63,12 @@ export default function Category(props) {
 
 export async function getStaticPaths() {
   try {
-    const res = await fetch(process.env.STRAPI_BASE + `categories`);
+    const res = await fetch(process.env.STRAPI_BASE + `product-categories`);
     const categories = await res.json();
 
     const names = [];
     categories.forEach((cat) => {
-      names.push('/category/' + cat.name); //This has the first letter capital
+      names.push('/productcategory/' + cat.name); //This has the first letter capital
     });
 
     return {
@@ -88,12 +85,8 @@ export async function getStaticProps(context) {
     const { params } = context;
     const { id } = params;
 
-    var param = id.charAt(0).toUpperCase() + id.slice(1).toLowerCase();
-    // param = 'Clean Living';
-
     const res = await fetch(
-      process.env.STRAPI_BASE +
-        `product-categories?category.name_contains=${param}`
+      process.env.STRAPI_BASE + `products?product-category.name_contains=${id}`
     );
 
     const products = await res.json();
@@ -101,7 +94,7 @@ export async function getStaticProps(context) {
     return {
       props: {
         products,
-        param,
+        param: id,
       },
     };
   } catch (e) {

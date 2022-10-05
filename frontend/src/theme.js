@@ -12,7 +12,7 @@ const lightBrown = '#B1AB7D';
 const orange = '#ff7700';
 const lightRed = '#ff6b6b';
 const lightBlue = '#00e5ff';
-const blue = '#00555e';
+const blue = '#9DCCFF';
 
 const purple = '#42005e';
 const roseRed = '#ff006f';
