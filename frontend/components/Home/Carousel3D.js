@@ -7,11 +7,10 @@ import {
   CardActionArea,
   CardContent,
   CardMedia,
+  Grid,
   Typography,
 } from '@mui/material';
 import { useRouter } from 'next/router';
-
-const Carousel = loadable(() => import('react-spring-3d-carousel'));
 
 const CustomImg = styled(Card)(({ theme }) => ({
   backgroundColor: theme.palette.common.blue,
@@ -81,5 +80,49 @@ export default function Carousel3D({ slides }) {
     }
   }, [slides]);
 
-  return <Carousel slides={cards} goToSlide={slide} />;
+  // return <Carousel slides={cards} goToSlide={slide} />;
+
+  return (
+    <>
+      <Grid
+        container
+        alignItems="center"
+        justifyContent="space-evenly"
+        spacing={4}
+        // sx={{ width: '100vw' }}
+      >
+        {slides.map((sl, i) => {
+          return (
+            <Grid item>
+              <CustomImg
+                elevation={10}
+                sx={(theme) => ({
+                  margin: '0 5rem',
+                  width: '10rem',
+                  [theme.breakpoints.up('sm')]: {
+                    width: '20rem',
+                  },
+                })}
+              >
+                <CardActionArea
+                  onClick={(e) => {
+                    router.push(`/product/${sl.slug}`);
+                  }}
+                >
+                  <CardMedia component="img" image={sl.image} />
+                  <CardContent>
+                    <CustomTyp align="center">{sl.name}</CustomTyp>
+
+                    <CustomTyp align="center" variant="h6">
+                      ${sl.price}
+                    </CustomTyp>
+                  </CardContent>
+                </CardActionArea>
+              </CustomImg>
+            </Grid>
+          );
+        })}
+      </Grid>
+    </>
+  );
 }

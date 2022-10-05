@@ -19,9 +19,7 @@ export default function Carousel({ products }) {
       products.forEach((product) => {
         var item = {};
 
-        console.log('CAROUSEL: ', product);
-
-        item.image = product.image[0].url;
+        item.image = product.images[0].url;
         item.name = product.name;
         item.height = product.images[0].height;
         item.price = product.price;
@@ -36,21 +34,6 @@ export default function Carousel({ products }) {
     }
   }, [products]);
 
-  const [RatedCL, setRatedCL] = useState([]);
-  const [RatedAC, setRatedAC] = useState([]);
-
-  useEffect(() => {
-    const getProducts = async () => {
-      const result = await getTopRated('62108e8587e59b6047859e53', 3);
-      if (result instanceof Array) setRatedCL([...result]);
-
-      const result2 = await getTopRated('622d249f6c49bb3c9664a51d', 3);
-      if (result2 instanceof Array) setRatedAC([...result2]);
-    };
-
-    getProducts();
-  }, []);
-
   return (
     <Grid
       container
@@ -64,8 +47,6 @@ export default function Carousel({ products }) {
         container
         direction="column"
         alignItems="center"
-        xs={12}
-        lg={4}
         sx={{ marginBottom: '30vh' }}
       >
         <Grid item alignSelf="center">
@@ -82,7 +63,7 @@ export default function Carousel({ products }) {
           item
           sx={(theme) => ({
             [theme.breakpoints.up('sm')]: {
-              marginTop: '40vh',
+              marginTop: '10vh',
             },
             [theme.breakpoints.down('sm')]: {
               marginTop: '30vh',
