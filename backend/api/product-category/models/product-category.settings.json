@@ -34,8 +34,8 @@
       "via": "product_categories"
     },
     "products": {
-      "collection": "product",
-      "via": "product_category"
+      "via": "product_category",
+      "collection": "product"
     },
     "slug": {
       "type": "string",

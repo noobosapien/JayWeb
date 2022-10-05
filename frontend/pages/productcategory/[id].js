@@ -7,7 +7,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 
 export default function Category(props) {
-  const { products, param } = props;
+  const { products, param, name } = props;
 
   const theme = useTheme();
   const matchesMD = useMediaQuery(theme.breakpoints.down('md'));
@@ -16,12 +16,7 @@ export default function Category(props) {
 
   useEffect(() => {
     setAllProducts(products);
-    console.log('PRODUCTS: ', products);
   }, [products]);
-
-  // useEffect(() => {
-  //   getProductCategories(param, setAllProducts);
-  // }, [param]);
 
   return (
     <Layout title="jaytronics" description={'jaytronics'}>
@@ -42,7 +37,7 @@ export default function Category(props) {
               fontWeight: '200',
             }}
           >
-            {param}
+            {name}
           </Typography>
         </Grid>
 
@@ -68,7 +63,7 @@ export async function getStaticPaths() {
 
     const names = [];
     categories.forEach((cat) => {
-      names.push('/productcategory/' + cat.name); //This has the first letter capital
+      names.push('/productcategory/' + cat.name);
     });
 
     return {
@@ -85,8 +80,26 @@ export async function getStaticProps(context) {
     const { params } = context;
     const { id } = params;
 
+    console.log(params);
+
+    const prodCatRes = await fetch(
+      process.env.STRAPI_BASE +
+        //   'http://192.168.1.71:1337/' +
+        `product-categories?slug=${id}`
+    );
+
+    const prodCat = await prodCatRes.json();
+
+    let prodID = '';
+
+    if (prodCat instanceof Array) {
+      prodID = prodCat[0].id;
+    }
+
     const res = await fetch(
-      process.env.STRAPI_BASE + `products?product-category.name_contains=${id}`
+      process.env.STRAPI_BASE +
+        //   'http://192.168.1.71:1337/' +
+        `products?product_category=${prodID}`
     );
 
     const products = await res.json();
@@ -95,6 +108,7 @@ export async function getStaticProps(context) {
       props: {
         products,
         param: id,
+        name: prodCat[0].name,
       },
     };
   } catch (e) {

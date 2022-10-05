@@ -19,7 +19,9 @@ export default function Carousel({ products }) {
       products.forEach((product) => {
         var item = {};
 
-        item.image = product.images[0].url;
+        console.log('CAROUSEL: ', product);
+
+        item.image = product.image[0].url;
         item.name = product.name;
         item.height = product.images[0].height;
         item.price = product.price;
