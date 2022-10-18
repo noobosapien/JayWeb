@@ -65,6 +65,12 @@
       "type": "integer",
       "required": true,
       "min": 0
+    },
+    "description": {
+      "type": "text"
+    },
+    "table": {
+      "type": "json"
     }
   }
 }
